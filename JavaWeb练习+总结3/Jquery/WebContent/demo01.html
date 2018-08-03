@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JqueryDemo01</title>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript">
+function big(){
+	var font_size=$("p").css("font-size");
+	var size=parseInt(font_size.replace("px",""));
+	$("p").css("font-size",(size+1)+"px");
+}
+</script>
+</head>
+<body>
+<input type="button" value="+" onclick="big();">
+<h1>使用jQuery的步骤</h1>
+<p>1.引入jQuery</p>
+<p>2.使用jQuery选择器定位节点</p>
+<p>3.调用jQuery方法操作节点</p>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Jquery img</title>
+
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript">
+function big(){
+	var font_size=$("p").css("font-size");
+	var size=parseInt(font_size.replace("px",""));
+	$("p").css("font-size",(size+1)+"px");
+}
+/*1）获取jQuery对象，并输出对象中各元素的内容
+ * 1.获取jQuery对象：$(“p”)
+   2.DOM对象转换为jQuery对象：$(obj)
+
+ */*/
+ function f1(){
+	var ps=$("p");//p标签
+	//alert(ps.length);
+	for(var i=0;i<ps.length;i++){
+		var p=ps.get(i);
+		alert(p.innerHTML);
+	}
+}
+/*2）单击图片时改变图片的宽高*/
+function f2(img){
+	$(img).width("300px").height("300px");
+	
+} 
+
+</script>
+</head>
+<body>
+<input type="button" value="+" onclick="big();">
+<h1>使用jQuery的步骤</h1>
+<p>1.引入jQuery</p>
+<p>2.使用jQuery选择器定位节点</p>
+<p>3.调用jQuery方法操作节点</p>
+ <input type="button" value="按钮一" onclick="f1();"/>
+<p>
+<img src="./images/01.jpg" onclick="f2(this);"/>
+<img src="./images/02.jpg" onclick="f2(this);"/>
+<img src="./images/03.jpg" onclick="f2(this);"/>
+</p> 
+</body>
+</html>

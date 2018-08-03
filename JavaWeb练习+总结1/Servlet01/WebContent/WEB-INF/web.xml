@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+<!-- 请求的路径信息：http://localhost:8080/Servlet01/reqInfo 
+     通过servlet-mapping,寻找servlet-name，然后找到相应的类名，执行相应的方法
+-->
+
+    <servlet>
+  <servlet-name>requestInfo</servlet-name>
+  <servlet-class>web.RequestInfo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>requestInfo</servlet-name>
+  <url-pattern>/reqInfo</url-pattern>
+  </servlet-mapping>
+</web-app>

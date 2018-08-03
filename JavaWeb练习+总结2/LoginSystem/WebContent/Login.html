@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="JS05.css" />
+<script type="text/javascript" src="JS05.js"></script>
+</head>
+<body>
+<div class="form">
+<form action="login" method="post">
+
+			<table>
+				<tr>
+					<th>登录</th>
+				</tr>
+				<tr>
+					<td><label for="admin">账号：</label>
+						<input type="text" id="admin"  name="admin"/><span id="sign"><u>(3-20)位任意字符</u></span><br />
+						<span id="a_result"></span>
+					</td>
+
+				</tr>
+				<tr>
+					<td><label for="password">密码：</label>
+						<input type="password" id="psd" name="psd"/><span id="sign"><u>(6-20)位任意字符</u></span><br />
+						<span id="p_result"></span>
+					</td>
+				</tr>
+				<tr>
+				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="登录" onclick="pd();" />
+						<span><a href="Insert.html">注册</a></span>
+					</td>		            
+					</td>
+				</tr>
+			</table>
+		
+</form>
+</div>
+</body>
+</html>

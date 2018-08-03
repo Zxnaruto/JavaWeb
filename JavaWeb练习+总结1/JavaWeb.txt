@@ -1,0 +1,23 @@
+1.有无环境变量都可以运行java程序，只要有jdk，可以把java文件放入jdk bin目录下javac/// java 运行
+2.在外部编译java文件，生成.class文件时，如果java文件中import一些特殊的jar包时，要用引入jar包的
+  方式进行编译生成.class文件。例：javac –cp d:\java\tomcat7\lib\servlet-api.jar –d . HelloServlet.java
+  * -cp：寻找jar包
+  * -d:在当前目录下生成.class文件。(该当前目录是指代码中所写的package)
+3.在外部编写java web程序的时候要注意文件的目录结构，一般为项目名称-->WEB-INF-->classes+web.xml-->
+   web-->.class文件。
+4.配置一般的web.xml：主要包含servlet的名称以及servlet-calss(包+.class), 和mappring 的url。其中mapping找的名称
+  为servlet的名。
+5.目前用JDK1.8，Tomcat8.0。
+
+6.Java EE配置Web环境：
+   添加JDK:Windows-->perferences-->java-->Installed JARS-->add
+   添加Tomcat:Windows-->perferences-->Server-->Runtime Environments-->add
+7.在Java EE中在Tomcat上部署web项目：
+  在控制台的Servers中添加Tomcat-->选中右键-->Add Remove-->将项目添加从Available添加到Configured
+  如果控制台没有Servers可以去Windows中添加。
+8.Java EE中创建动态web时自动生成xml文件，在创建Dynamic Web project时，点击两次next，然后
+   勾选创建xml-->finish
+9.如何添加项目到tomcat的webapps中：
+   在给JAVA EE添加servers的tomcat部署时，双击已经选择好的tomcat，然后在选项中选择use tomcat...
+..... 在把 bwtwebapps改成webapps。
+  如果选不了就删除当前配置好的tomcat，再次走上面的步骤。

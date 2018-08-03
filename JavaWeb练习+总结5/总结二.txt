@@ -1,0 +1,24 @@
+1.jsp:<c:set var="ctx" value="${pageContext.request.contextPath}"/>获取当前根目录
+2.instanceof ：判断其左边对象是否为其右边类的实例
+3.getDeclaredMethods()：返回一个对象数组，该方法是获取本类中的所有方法，包括私有的(private、protected、默认以及public)的方法。
+  Object obj=request.getAttribute("productCategoryVoList");//通过HomeServlet获取到产品分类表（自然serlvet会找service,然后service会找到，再从dao返回结果给service,service把结果返回给servlet,显示在页面上）
+*4.AbstractServlet:就是通过判断请求的路劲（action）是否为空，为空就跳回pre/index.jsp,不为空就跳到相应请求的页面。
+*5. EmptyUtils：该工具类是为了判断所请求的action是否为空。
+*6.PrintUtil：该工具类是为了获取并打印错误信息的。
+
+*7.关于HomeSerlvlet与初始主页index之间的关系：
+    连续跳跃，原本是由web.xml的welcome来跳转到index.jsp，由于在初次跳转到index.jsp的时候
+   Object obj=request.getAttribute("productCategoryVoList");必定为空，
+  所以他会执行下面的语句自动跳转到/Home?action=index，同时执行servlet获取数据再次
+		   显示该页面。
+		   如果直接访问Home路径，则不会显示商品列表，会跳转到per/index.jsp.(这是因为servlet中会有return pre/index)
+
+8.所有的servlet由于继承了AbstractServlet所以都会调用其中重写的dopost，doget方法。
+9.通过路径+action来实现功能。
+10.路径(根目录)+Servlet配置的url+action=Servlet中的方法名实现的。打个比方：注册："${ctx}/Register?action=toRegister"
+其中Register为servlet的url名，toRegister为RedisterServlet中的方法名称
+当你点击一个链接的时候，他会更具路径找到相应的Servlet,然后执行toRegister方法，在执行toRegister方法的时候，由于它继承了抽象的
+AbstractServlet，他在点击链接的时候会把返回值返回给AbstractServlet中的doPost方法，通过这个方法实现跳转到pre/register.jsp，当跳转到
+这个页面后，我们可以填写信息，当再次点击注册的时候(去注册页面看一下pre/register.jsp)
+
+11.<a>标签的默认请求方式为get，response.Rect....默认的请求方式也为get

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+
+  <!-- 通过mappping的名称，找到servlet，然后通过servlet的名称找到类，然后运行 -->
+    <!-- 部署项目，在下面的servers中添加tomacat 和项目，然后运行。如果没有service就去window找 -->
+  <servlet>
+  <servlet-name>helloServlet</servlet-name>
+  <servlet-class>web.HelloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>helloServlet</servlet-name>
+  <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+</web-app>

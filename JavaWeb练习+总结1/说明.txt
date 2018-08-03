@@ -1,0 +1,6 @@
+1.JavaWeb：关于JavaWeb的一些注意事项，以及小总结。
+2.firstweb:JavaWeb 页面输出hello
+3.Servlet01:关于获取每个消息头名称，以及HttpServletRequest一些方法的测试。
+4.RequestDate:Date与Calendar两种获取时间的方法。
+5.总结一：关于servlet说明、HttpServletRequest和HttpServletReponse的定义和用法说明。
+                以及Web工程的目录结构、HTTP协议等。

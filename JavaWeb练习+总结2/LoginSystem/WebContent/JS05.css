@@ -1,0 +1,39 @@
+  .form {
+  	width: 400px;
+  	margin: 150px auto;
+  	border: 1px solid #ccc;
+  }
+   .table {
+  	width: 400px;
+  	margin: 150px auto;
+  	border: 1px solid #ccc;
+  }
+table,th,td{
+	border-collapse: collapse;
+	border: 1px solid black;
+	border-color: darkorange;
+}
+
+td{
+	height: 70px;
+	width: 400px;
+	text-align: center;
+}
+th{
+	text-align:center;
+	height: 90px;
+	width: 400px;
+	font: "微软雅黑";
+	font-size: x-large;
+}
+#p_result{
+	color: red;
+}
+#a_result{
+	color: red;
+}
+#sign{
+	font-size: x-small;
+    
+    
+}
